@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cafe Atlas 100 - 전국 핫플 지도</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Noto+Sans+KR:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="brand" onclick="go('map')">Cafe Atlas 100</div>
+    </header>
+
+    <!-- 메인 페이지: 한반도 지형 지도 -->
+    <section id="p-map" class="page active">
+        <div class="wrap">
+            <div class="mapContainer">
+                <!-- 서울 -->
+                <div class="region-tag" style="left: 45%; top: 30%;"><button class="regionBtn"
+                        onclick="showList('서울')">서울</button></div>
+                <!-- 경기/인천 -->
+                <div class="region-tag" style="left: 38%; top: 38%;"><button class="regionBtn"
+                        onclick="showList('경기/인천')">경기/인천</button></div>
+                <!-- 강원 -->
+                <div class="region-tag" style="left: 65%; top: 25%;"><button class="regionBtn"
+                        onclick="showList('강원')">강원</button></div>
+                <!-- 경상 -->
+                <div class="region-tag" style="left: 72%; top: 62%;"><button class="regionBtn"
+                        onclick="showList('경상')">경상</button></div>
+                <!-- 충청/전라 (기존 소스 위치 유지) -->
+                <div class="region-tag" style="left: 38%; top: 68%;"><button class="regionBtn"
+                        onclick="showList('충청/전라')">충청/전라</button></div>
+                <!-- 제주 -->
+                <div class="region-tag" style="left: 30%; top: 90%;"><button class="regionBtn"
+                        onclick="showList('제주')">제주</button></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 리스트 페이지 -->
+    <section id="p-list" class="page">
+        <div class="wrap">
+            <button class="nav-back" onclick="go('map')">← 지도로 돌아가기</button>
+            <h2 id="listTitle"></h2>
+            <div class="grid" id="grid"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
